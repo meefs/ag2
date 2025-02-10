@@ -250,6 +250,7 @@
             "docs/use-cases/notebooks/notebooks/agentchat_realtime_gemini_websocket",
             "docs/use-cases/notebooks/notebooks/agentchat_transform_messages",
             "docs/use-cases/notebooks/notebooks/agentchat_oai_assistant_function_call",
+            "docs/use-cases/notebooks/notebooks/agentchat_small_llm_rag_planning",
             "docs/use-cases/notebooks/notebooks/agentchat_websockets",
             "docs/use-cases/notebooks/notebooks/agentchat_realtime_swarm_websocket",
             "docs/use-cases/notebooks/notebooks/agentchat_auto_feedback_from_code_execution",
