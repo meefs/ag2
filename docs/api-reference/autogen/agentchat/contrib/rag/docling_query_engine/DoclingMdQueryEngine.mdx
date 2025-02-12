@@ -11,10 +11,10 @@ title: autogen.agentchat.contrib.rag.docling_query_engine.DoclingMdQueryEngine
 DoclingMdQueryEngine(**kwargs)
 ```
 
-    This query engine leverages LlamaIndex's VectorStoreIndex in combination with Chromadb to query Markdown files processed by docling.
-    You can specify the collection name when initializing the database via the init_db() method and later add more documents to the collection.
-    Data is persisted using Chromadb's PersistentClient, which saves your collections to a directory relative to your current path.
-    LlamaIndex's VectorStoreIndex is then used to efficiently index and query the documents.
+    This engine leverages Chromadb to persist document embeddings in a named collection
+    and LlamaIndex’s VectorStoreIndex to efficiently index and retrieve documents, and generate an answer in response
+    to natural language queries. The Chromadb collection serves as the storage layer, while
+    the collection name uniquely identifies the set of documents within the persistent database.
     
     Initializes the DoclingMdQueryEngine with db_path, metadata, and embedding function and llm.
 
@@ -27,6 +27,12 @@ DoclingMdQueryEngine(**kwargs)
 
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
 #### add_docs
+<br />
+
+    <br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
+#### get_collection_name
 <br />
 
     <br />
