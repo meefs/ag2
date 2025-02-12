@@ -1,0 +1,44 @@
+---
+sidebarTitle: DoclingMdQueryEngine
+title: autogen.agentchat.contrib.rag.docling_query_engine.DoclingMdQueryEngine
+---
+<h2 id="autogen.agentchat.contrib.rag.docling_query_engine.DoclingMdQueryEngine" class="doc doc-heading">
+    <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>
+    <span class="doc doc-object-name doc-class-name">DoclingMdQueryEngine</span>
+</h2>
+
+```python
+DoclingMdQueryEngine(**kwargs)
+```
+
+    This query engine leverages LlamaIndex's VectorStoreIndex in combination with Chromadb to query Markdown files processed by docling.
+    You can specify the collection name when initializing the database via the init_db() method and later add more documents to the collection.
+    Data is persisted using Chromadb's PersistentClient, which saves your collections to a directory relative to your current path.
+    LlamaIndex's VectorStoreIndex is then used to efficiently index and query the documents.
+    
+    Initializes the DoclingMdQueryEngine with db_path, metadata, and embedding function and llm.
+
+<b>Parameters:</b>
+| Name | Description |
+|--|--|
+| `**kwargs` |  |
+
+### Class Attributes
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
+#### add_docs
+<br />
+
+    <br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
+#### init_db
+<br />
+
+    <br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
+#### query
+<br />
+
+    <br />
