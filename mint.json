@@ -1712,6 +1712,7 @@
         {
           "group": "Recent posts",
           "pages": [
+            "docs/blog/2025-02-13-DeepResearchAgent/index",
             "docs/blog/2025-01-31-Websurfing-Tools/index",
             "docs/blog/2025-01-31-WebSurferAgent/index",
             "docs/blog/2025-01-29-RealtimeAgent-with-gemini/index",
