@@ -1030,7 +1030,6 @@
                         "docs/api-reference/autogen/agentchat/contrib/swarm_agent/ContextStr",
                         "docs/api-reference/autogen/agentchat/contrib/swarm_agent/ON_CONDITION",
                         "docs/api-reference/autogen/agentchat/contrib/swarm_agent/SwarmAgent",
-                        "docs/api-reference/autogen/agentchat/contrib/swarm_agent/SwarmResult",
                         "docs/api-reference/autogen/agentchat/contrib/swarm_agent/create_swarm_transition",
                         "docs/api-reference/autogen/agentchat/contrib/swarm_agent/register_hand_off"
                       ]
