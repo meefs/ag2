@@ -1862,7 +1862,8 @@
                     "docs/api-reference/autogen/tools/dependency_injection/Field",
                     "docs/api-reference/autogen/tools/dependency_injection/get_context_params",
                     "docs/api-reference/autogen/tools/dependency_injection/inject_params",
-                    "docs/api-reference/autogen/tools/dependency_injection/on"
+                    "docs/api-reference/autogen/tools/dependency_injection/on",
+                    "docs/api-reference/autogen/tools/dependency_injection/remove_params"
                   ]
                 },
                 {
