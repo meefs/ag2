@@ -1729,6 +1729,8 @@
                       "group": "chat_completion_message",
                       "pages": [
                         "docs/api-reference/autogen/oai/oai_models/chat_completion_message/overview",
+                        "docs/api-reference/autogen/oai/oai_models/chat_completion_message/Annotation",
+                        "docs/api-reference/autogen/oai/oai_models/chat_completion_message/AnnotationURLCitation",
                         "docs/api-reference/autogen/oai/oai_models/chat_completion_message/ChatCompletionMessage",
                         "docs/api-reference/autogen/oai/oai_models/chat_completion_message/FunctionCall"
                       ]
