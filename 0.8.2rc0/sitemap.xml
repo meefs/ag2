@@ -357,6 +357,10 @@
          <lastmod>2025-03-14</lastmod>
     </url>
     <url>
+         <loc>http://docs.ag2.ai/latest/docs/api-reference/autogen/agentchat/contrib/rag/LlamaIndexQueryEngine/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
          <loc>http://docs.ag2.ai/latest/docs/api-reference/autogen/agentchat/contrib/rag/MongoDBQueryEngine/</loc>
          <lastmod>2025-03-14</lastmod>
     </url>
