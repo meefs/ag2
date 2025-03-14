@@ -300,6 +300,7 @@
             "docs/use-cases/notebooks/notebooks/agentchat_webscraping_with_apify",
             "docs/use-cases/notebooks/notebooks/agentchat_swarm",
             "docs/use-cases/notebooks/notebooks/agentchat_function_call_currency_calculator",
+            "docs/use-cases/notebooks/notebooks/LlamaIndex_query_engine",
             "docs/use-cases/notebooks/notebooks/agentchat_with_memory",
             "docs/use-cases/notebooks/notebooks/agentchat_realtime_gemini_swarm_websocket",
             "docs/use-cases/notebooks/notebooks/agentchat_nested_sequential_chats",
@@ -330,6 +331,7 @@
             "docs/use-cases/notebooks/notebooks/agentchat_swarm_enhanced",
             "docs/use-cases/notebooks/notebooks/agentchat_structured_outputs_from_config",
             "docs/use-cases/notebooks/notebooks/agentchat_openlit",
+            "docs/use-cases/notebooks/notebooks/Chromadb_query_engine",
             "docs/use-cases/notebooks/notebooks/agentchat_web_info",
             "docs/use-cases/notebooks/notebooks/agentchat_auto_feedback_from_code_execution",
             "docs/use-cases/notebooks/notebooks/agentchat_realtime_webrtc",
@@ -1075,6 +1077,7 @@
                       "pages": [
                         "docs/api-reference/autogen/agentchat/contrib/rag/overview",
                         "docs/api-reference/autogen/agentchat/contrib/rag/ChromaDBQueryEngine",
+                        "docs/api-reference/autogen/agentchat/contrib/rag/LlamaIndexQueryEngine",
                         "docs/api-reference/autogen/agentchat/contrib/rag/MongoDBQueryEngine",
                         "docs/api-reference/autogen/agentchat/contrib/rag/RAGQueryEngine"
                       ]
