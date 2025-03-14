@@ -717,6 +717,22 @@
          <lastmod>2025-03-14</lastmod>
     </url>
     <url>
+         <loc>http://docs.ag2.ai/latest/docs/api-reference/autogen/llm_config/LLMConfig/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>http://docs.ag2.ai/latest/docs/api-reference/autogen/llm_config/LLMConfigEntry/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>http://docs.ag2.ai/latest/docs/api-reference/autogen/llm_config/LLMConfigFilter/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>http://docs.ag2.ai/latest/docs/api-reference/autogen/llm_config/register_llm_config/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
          <loc>http://docs.ag2.ai/latest/docs/api-reference/autogen/logger/FileLogger/</loc>
          <lastmod>2025-03-14</lastmod>
     </url>
@@ -834,6 +850,10 @@
     </url>
     <url>
          <loc>http://docs.ag2.ai/latest/docs/api-reference/autogen/messages/client_messages/UsageSummaryMessage/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>http://docs.ag2.ai/latest/docs/api-reference/autogen/oai/client/OpenAILLMConfigEntry/</loc>
          <lastmod>2025-03-14</lastmod>
     </url>
     <url>
