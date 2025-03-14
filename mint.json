@@ -1650,6 +1650,13 @@
               ]
             },
             {
+              "group": "json_utils",
+              "pages": [
+                "docs/api-reference/autogen/json_utils/overview",
+                "docs/api-reference/autogen/json_utils/resolve_json_references"
+              ]
+            },
+            {
               "group": "llm_config",
               "pages": [
                 "docs/api-reference/autogen/llm_config/overview",
