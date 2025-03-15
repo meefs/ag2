@@ -1759,7 +1759,16 @@
               "group": "oai",
               "pages": [
                 "docs/api-reference/autogen/oai/overview",
+                "docs/api-reference/autogen/oai/AnthropicLLMConfigEntry",
+                "docs/api-reference/autogen/oai/BedrockLLMConfigEntry",
+                "docs/api-reference/autogen/oai/CerebrasLLMConfigEntry",
+                "docs/api-reference/autogen/oai/CohereLLMConfigEntry",
+                "docs/api-reference/autogen/oai/GeminiLLMConfigEntry",
+                "docs/api-reference/autogen/oai/GroqLLMConfigEntry",
+                "docs/api-reference/autogen/oai/MistralLLMConfigEntry",
+                "docs/api-reference/autogen/oai/OllamaLLMConfigEntry",
                 "docs/api-reference/autogen/oai/OpenAILLMConfigEntry",
+                "docs/api-reference/autogen/oai/TogetherLLMConfigEntry",
                 {
                   "group": "anthropic",
                   "pages": [
