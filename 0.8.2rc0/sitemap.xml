@@ -873,6 +873,14 @@
          <lastmod>2025-03-17</lastmod>
     </url>
     <url>
+         <loc>http://docs.ag2.ai/latest/docs/api-reference/autogen/oai/client/AzureOpenAILLMConfigEntry/</loc>
+         <lastmod>2025-03-17</lastmod>
+    </url>
+    <url>
+         <loc>http://docs.ag2.ai/latest/docs/api-reference/autogen/oai/client/DeepSeekLLMConfigEntry/</loc>
+         <lastmod>2025-03-17</lastmod>
+    </url>
+    <url>
          <loc>http://docs.ag2.ai/latest/docs/api-reference/autogen/oai/client/OpenAILLMConfigEntry/</loc>
          <lastmod>2025-03-17</lastmod>
     </url>
