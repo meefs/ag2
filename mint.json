@@ -1760,9 +1760,11 @@
               "pages": [
                 "docs/api-reference/autogen/oai/overview",
                 "docs/api-reference/autogen/oai/AnthropicLLMConfigEntry",
+                "docs/api-reference/autogen/oai/AzureOpenAILLMConfigEntry",
                 "docs/api-reference/autogen/oai/BedrockLLMConfigEntry",
                 "docs/api-reference/autogen/oai/CerebrasLLMConfigEntry",
                 "docs/api-reference/autogen/oai/CohereLLMConfigEntry",
+                "docs/api-reference/autogen/oai/DeepSeekLLMConfigEntry",
                 "docs/api-reference/autogen/oai/GeminiLLMConfigEntry",
                 "docs/api-reference/autogen/oai/GroqLLMConfigEntry",
                 "docs/api-reference/autogen/oai/MistralLLMConfigEntry",
