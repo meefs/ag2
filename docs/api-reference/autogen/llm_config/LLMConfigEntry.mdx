@@ -94,6 +94,25 @@ LLMConfigEntry(**data: Any)
 
     <br />
 
+### Static Methods
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>
+#### check_base_url
+
+```python
+check_base_url(v: Any, info: ValidationInfo) -> Any
+```
+
+    
+
+<b>Parameters:</b>
+| Name | Description |
+|--|--|
+| `v` | **Type:** Any |
+| `info` | **Type:** pydantic_core.core_schema.ValidationInfo |
+
+<br />
+
 ### Instance Methods
 
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>
@@ -125,6 +144,28 @@ get(
 |--|--|
 | `key` | **Type:** str |
 | `default` | **Type:** Any \| None<br/><br/>**Default:** None |
+
+<br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>
+#### items
+
+```python
+items(self) -> Iterable[tuple[str, Any]]
+```
+
+    
+
+<br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>
+#### keys
+
+```python
+keys(self) -> Iterable[str]
+```
+
+    
 
 <br />
 
@@ -217,5 +258,16 @@ serialize_base_url(self, v: Any) -> Any
 | Name | Description |
 |--|--|
 | `v` | **Type:** Any |
+
+<br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>
+#### values
+
+```python
+values(self) -> Iterable[Any]
+```
+
+    
 
 <br />

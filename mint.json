@@ -467,7 +467,6 @@
             "docs/api-reference/autogen/GroupChatManager",
             "docs/api-reference/autogen/InvalidCarryOverTypeError",
             "docs/api-reference/autogen/LLMConfig",
-            "docs/api-reference/autogen/LLMConfigFilter",
             "docs/api-reference/autogen/ModelClient",
             "docs/api-reference/autogen/NoEligibleSpeakerError",
             "docs/api-reference/autogen/ON_CONDITION",
