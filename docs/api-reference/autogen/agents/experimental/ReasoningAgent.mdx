@@ -10,8 +10,8 @@ title: autogen.agents.experimental.ReasoningAgent
 ```python
 ReasoningAgent(
     name: str,
-    llm_config: dict[str, Any],
-    grader_llm_config: dict[str, Any] | None = None,
+    llm_config: LLMConfig | dict[str, Any] | None = None,
+    grader_llm_config: LLMConfig | dict[str, Any] | None = None,
     max_depth: int = 4,
     beam_size: int = 3,
     answer_approach: Literal['pool', 'best'] = 'pool',
@@ -28,8 +28,8 @@ ReasoningAgent(
 | Name | Description |
 |--|--|
 | `name` | **Type:** str |
-| `llm_config` | **Type:** dict[str, typing.Any] |
-| `grader_llm_config` | **Type:** dict[str, typing.Any] \| None<br/><br/>**Default:** None |
+| `llm_config` | **Type:** [LLMConfig](/docs/api-reference/autogen/llm_config/LLMConfig) \| dict[str, typing.Any] \| None<br/><br/>**Default:** None |
+| `grader_llm_config` | **Type:** [LLMConfig](/docs/api-reference/autogen/llm_config/LLMConfig) \| dict[str, typing.Any] \| None<br/><br/>**Default:** None |
 | `max_depth` | **Type:** int<br/><br/>**Default:** 4 |
 | `beam_size` | **Type:** int<br/><br/>**Default:** 3 |
 | `answer_approach` | **Type:** Literal['pool', 'best']<br/><br/>**Default:** 'pool' |
