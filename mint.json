@@ -133,6 +133,12 @@
                 "docs/user-guide/basic-concepts/tools/controlling-use",
                 "docs/user-guide/basic-concepts/tools/tools-with-secrets",
                 {
+                  "group": "Model Context Protocol",
+                  "pages": [
+                    "docs/user-guide/basic-concepts/tools/mcp/client"
+                  ]
+                },
+                {
                   "group": "Interoperability",
                   "pages": [
                     "docs/user-guide/basic-concepts/tools/interop/langchain",
@@ -391,6 +397,7 @@
             "docs/use-cases/notebooks/notebooks/agentchat_RetrieveChat_couchbase",
             "docs/use-cases/notebooks/notebooks/agentchat_graph_rag_neo4j_native",
             "docs/use-cases/notebooks/notebooks/autobuild_agent_library",
+            "docs/use-cases/notebooks/notebooks/mcp_client",
             "docs/use-cases/notebooks/notebooks/agentchat_nested_chats_chess",
             "docs/use-cases/notebooks/notebooks/agentchat_function_call_async",
             "docs/use-cases/notebooks/notebooks/agentchat_society_of_mind",
@@ -1691,18 +1698,6 @@
                 "docs/api-reference/autogen/interop/PydanticAIInteroperability",
                 "docs/api-reference/autogen/interop/register_interoperable_class",
                 {
-                  "group": "pydantic_ai",
-                  "pages": [
-                    {
-                      "group": "pydantic_ai_tool",
-                      "pages": [
-                        "docs/api-reference/autogen/interop/pydantic_ai/pydantic_ai_tool/overview",
-                        "docs/api-reference/autogen/interop/pydantic_ai/pydantic_ai_tool/PydanticAITool"
-                      ]
-                    }
-                  ]
-                },
-                {
                   "group": "registry",
                   "pages": [
                     "docs/api-reference/autogen/interop/registry/overview",
@@ -1792,6 +1787,13 @@
                 "docs/api-reference/autogen/math_utils/last_boxed_only_string",
                 "docs/api-reference/autogen/math_utils/remove_boxed",
                 "docs/api-reference/autogen/math_utils/voting_counts"
+              ]
+            },
+            {
+              "group": "mcp",
+              "pages": [
+                "docs/api-reference/autogen/mcp/overview",
+                "docs/api-reference/autogen/mcp/create_toolkit"
               ]
             },
             {

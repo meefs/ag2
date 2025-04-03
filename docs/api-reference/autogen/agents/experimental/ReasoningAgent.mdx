@@ -1046,6 +1046,27 @@ process_last_received_message(self, messages: list[dict[str, Any]]) -> list[di
 <br />
 
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>
+#### rate_batch_nodes
+
+```python
+rate_batch_nodes(
+    self,
+    nodes: list[ThinkNode],
+    ground_truth: str | None = None
+) -> list[float]
+```
+
+    Rate a batch of nodes using a single call of the grader agent. All the nodes must have the same parent.<br/>This method evaluates all given nodes while considering the other available options.<br/>
+
+<b>Parameters:</b>
+| Name | Description |
+|--|--|
+| `nodes` | List of nodes to rate, all nodes must have the same parent<br/><br/>**Type:** list[[ThinkNode](/docs/api-reference/autogen/agents/experimental/ThinkNode)] |
+| `ground_truth` | Optional ground truth to provide to the grader<br/><br/>**Type:** str \| None<br/><br/>**Default:** None |
+
+<br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>
 #### rate_node
 
 ```python
