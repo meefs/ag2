@@ -2413,43 +2413,7 @@
          <lastmod>2025-04-04</lastmod>
     </url>
     <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/tool-calling/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/web-surfing/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/browser-use/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/deep-research/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/discord/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/slack/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/telegram/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/messaging/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/crawl4ai/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/websurferagent/</loc>
+         <loc>https://docs.ag2.ai/latest/docs/blog/category/ag2-agents/</loc>
          <lastmod>2025-04-04</lastmod>
     </url>
     <url>
@@ -2457,11 +2421,7 @@
          <lastmod>2025-04-04</lastmod>
     </url>
     <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/voice-agents/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/gemini/</loc>
+         <loc>https://docs.ag2.ai/latest/docs/blog/category/non-openai-models/</loc>
          <lastmod>2025-04-04</lastmod>
     </url>
     <url>
@@ -2469,35 +2429,11 @@
          <lastmod>2025-04-04</lastmod>
     </url>
     <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/websockets/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
          <loc>https://docs.ag2.ai/latest/docs/blog/category/structured-messages/</loc>
          <lastmod>2025-04-04</lastmod>
     </url>
     <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/ai-tools/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/webrtc/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/swarm-teams/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/twilio/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/llm/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/gpt/</loc>
+         <loc>https://docs.ag2.ai/latest/docs/blog/category/swarm/</loc>
          <lastmod>2025-04-04</lastmod>
     </url>
     <url>
@@ -2509,35 +2445,7 @@
          <lastmod>2025-04-04</lastmod>
     </url>
     <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/langchain/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/crewai/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/pydanticai/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
          <loc>https://docs.ag2.ai/latest/docs/blog/category/rag/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/graph-rag/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/structured-outputs/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/swarm/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/nested-chat/</loc>
          <lastmod>2025-04-04</lastmod>
     </url>
     <url>
@@ -2545,39 +2453,7 @@
          <lastmod>2025-04-04</lastmod>
     </url>
     <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/groupchat/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/autobuild/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/agent/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
          <loc>https://docs.ag2.ai/latest/docs/blog/category/observability/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/autogen/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/agentops/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/mistral-ai/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/anthropic/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/togetherai/</loc>
          <lastmod>2025-04-04</lastmod>
     </url>
     <url>
@@ -2585,59 +2461,7 @@
          <lastmod>2025-04-04</lastmod>
     </url>
     <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/task-utility/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/thoughts/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/interview-notes/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/news/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/summary/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/roadmap/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/ui/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/web/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/ux/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/openai-assistant/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/cost-effectiveness/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/lmm/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
          <loc>https://docs.ag2.ai/latest/docs/blog/category/multimodal/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/teach/</loc>
          <lastmod>2025-04-04</lastmod>
     </url>
     <url>
@@ -2662,10 +2486,6 @@
     </url>
     <url>
          <loc>https://docs.ag2.ai/latest/docs/blog/archive/2023/page/2/</loc>
-         <lastmod>2025-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/llm/page/2/</loc>
          <lastmod>2025-04-04</lastmod>
     </url>
 </urlset>
