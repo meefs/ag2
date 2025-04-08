@@ -1724,9 +1724,12 @@
                     "docs/api-reference/autogen/io/run_response/overview",
                     "docs/api-reference/autogen/io/run_response/AsyncRunResponse",
                     "docs/api-reference/autogen/io/run_response/AsyncRunResponseProtocol",
+                    "docs/api-reference/autogen/io/run_response/Cost",
+                    "docs/api-reference/autogen/io/run_response/CostBreakdown",
                     "docs/api-reference/autogen/io/run_response/RunInfoProtocol",
                     "docs/api-reference/autogen/io/run_response/RunResponse",
-                    "docs/api-reference/autogen/io/run_response/RunResponseProtocol"
+                    "docs/api-reference/autogen/io/run_response/RunResponseProtocol",
+                    "docs/api-reference/autogen/io/run_response/Usage"
                   ]
                 },
                 {
@@ -1796,7 +1799,14 @@
               "group": "mcp",
               "pages": [
                 "docs/api-reference/autogen/mcp/overview",
-                "docs/api-reference/autogen/mcp/create_toolkit"
+                "docs/api-reference/autogen/mcp/create_toolkit",
+                {
+                  "group": "mcp_client",
+                  "pages": [
+                    "docs/api-reference/autogen/mcp/mcp_client/overview",
+                    "docs/api-reference/autogen/mcp/mcp_client/ResultSaved"
+                  ]
+                }
               ]
             },
             {
