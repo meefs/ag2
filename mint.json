@@ -1522,6 +1522,13 @@
                   ]
                 },
                 {
+                  "group": "base_event",
+                  "pages": [
+                    "docs/api-reference/autogen/events/base_event/overview",
+                    "docs/api-reference/autogen/events/base_event/get_event_classes"
+                  ]
+                },
+                {
                   "group": "client_events",
                   "pages": [
                     "docs/api-reference/autogen/events/client_events/overview",
