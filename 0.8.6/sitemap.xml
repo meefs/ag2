@@ -1197,6 +1197,10 @@
          <lastmod>2025-04-16</lastmod>
     </url>
     <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/tools/experimental/TavilySearchTool/</loc>
+         <lastmod>2025-04-16</lastmod>
+    </url>
+    <url>
          <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/tools/experimental/TelegramRetrieveTool/</loc>
          <lastmod>2025-04-16</lastmod>
     </url>
@@ -2030,6 +2034,10 @@
     </url>
     <url>
          <loc>https://docs.ag2.ai/latest/docs/use-cases/notebooks/notebooks/tools_perplexity_search/</loc>
+         <lastmod>2025-04-16</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/use-cases/notebooks/notebooks/tools_tavily_search/</loc>
          <lastmod>2025-04-16</lastmod>
     </url>
     <url>
