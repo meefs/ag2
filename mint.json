@@ -1207,6 +1207,7 @@
                     "docs/api-reference/autogen/agentchat/group/GroupChatTarget",
                     "docs/api-reference/autogen/agentchat/group/Handoffs",
                     "docs/api-reference/autogen/agentchat/group/NestedChatTarget",
+                    "docs/api-reference/autogen/agentchat/group/OnContextCondition",
                     "docs/api-reference/autogen/agentchat/group/ReplyResult",
                     "docs/api-reference/autogen/agentchat/group/RevertToUserTarget",
                     "docs/api-reference/autogen/agentchat/group/SpeakerSelectionResult",
@@ -1293,6 +1294,13 @@
                       ]
                     },
                     {
+                      "group": "on_context_condition",
+                      "pages": [
+                        "docs/api-reference/autogen/agentchat/group/on_context_condition/overview",
+                        "docs/api-reference/autogen/agentchat/group/on_context_condition/OnContextCondition"
+                      ]
+                    },
+                    {
                       "group": "patterns",
                       "pages": [
                         "docs/api-reference/autogen/agentchat/group/patterns/overview",
@@ -1360,7 +1368,7 @@
                           "group": "group_manager_target",
                           "pages": [
                             "docs/api-reference/autogen/agentchat/group/targets/group_manager_target/overview",
-                            "docs/api-reference/autogen/agentchat/group/targets/group_manager_target/prepare_groupchat_auto_speaker"
+                            "docs/api-reference/autogen/agentchat/group/targets/group_manager_target/GroupManagerTarget"
                           ]
                         },
                         {
