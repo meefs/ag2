@@ -193,6 +193,10 @@
          <lastmod>2025-05-07</lastmod>
     </url>
     <url>
+         <loc>https://docs.ag2.ai/latest/docs/_blogs/2025-05-07-AG2-Copilot-Integration/</loc>
+         <lastmod>2025-05-07</lastmod>
+    </url>
+    <url>
          <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/Agent/</loc>
          <lastmod>2025-05-07</lastmod>
     </url>
@@ -1577,6 +1581,10 @@
          <lastmod>2025-05-07</lastmod>
     </url>
     <url>
+         <loc>https://docs.ag2.ai/latest/docs/blog/2025/05/07/AG2-Copilot-Integration/</loc>
+         <lastmod>2025-05-07</lastmod>
+    </url>
+    <url>
          <loc>https://docs.ag2.ai/latest/docs/community-talks/2025-04-10-NOVA/</loc>
          <lastmod>2025-05-07</lastmod>
     </url>
@@ -1874,6 +1882,18 @@
     </url>
     <url>
          <loc>https://docs.ag2.ai/latest/docs/use-cases/notebooks/notebooks/agentchat_logging/</loc>
+         <lastmod>2025-05-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/use-cases/notebooks/notebooks/agentchat_mcp_arxiv/</loc>
+         <lastmod>2025-05-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/use-cases/notebooks/notebooks/agentchat_mcp_filesystem/</loc>
+         <lastmod>2025-05-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/use-cases/notebooks/notebooks/agentchat_mcp_wikipedia/</loc>
          <lastmod>2025-05-07</lastmod>
     </url>
     <url>
@@ -2641,11 +2661,15 @@
          <lastmod>2025-05-07</lastmod>
     </url>
     <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/release/</loc>
+         <loc>https://docs.ag2.ai/latest/docs/blog/category/ag2/</loc>
          <lastmod>2025-05-07</lastmod>
     </url>
     <url>
-         <loc>https://docs.ag2.ai/latest/docs/blog/category/ag2/</loc>
+         <loc>https://docs.ag2.ai/latest/docs/blog/category/copilotkit/</loc>
+         <lastmod>2025-05-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/blog/category/release/</loc>
          <lastmod>2025-05-07</lastmod>
     </url>
     <url>
