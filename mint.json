@@ -373,6 +373,7 @@
             "docs/use-cases/notebooks/notebooks/agentchat_groupchat_stateflow",
             "docs/use-cases/notebooks/notebooks/agentchat_small_llm_rag_planning",
             "docs/use-cases/notebooks/notebooks/agentchat_groupchat_tools",
+            "docs/use-cases/notebooks/notebooks/tools_duckduckgo_search",
             "docs/use-cases/notebooks/notebooks/agentchat_quickstart_examples",
             "docs/use-cases/notebooks/notebooks/agentchat_realtime_gemini_swarm_websocket",
             "docs/use-cases/notebooks/notebooks/mcp_client",
