@@ -1321,6 +1321,14 @@
          <lastmod>2025-05-28</lastmod>
     </url>
     <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/tools/experimental/ReliableTool/</loc>
+         <lastmod>2025-05-28</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/tools/experimental/ReliableToolError/</loc>
+         <lastmod>2025-05-28</lastmod>
+    </url>
+    <url>
          <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/tools/experimental/SlackRetrieveRepliesTool/</loc>
          <lastmod>2025-05-28</lastmod>
     </url>
@@ -1390,6 +1398,14 @@
     </url>
     <url>
          <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/tools/experimental/perplexity/perplexity_search/PerplexitySearchTool/</loc>
+         <lastmod>2025-05-28</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/tools/experimental/reliable/reliable/SuccessfulExecutionParameters/</loc>
+         <lastmod>2025-05-28</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/tools/experimental/reliable/reliable/ToolExecutionDetails/</loc>
          <lastmod>2025-05-28</lastmod>
     </url>
     <url>
