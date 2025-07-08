@@ -749,6 +749,26 @@
          <lastmod>2025-07-08</lastmod>
     </url>
     <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/environments/docker_python_environment/DockerPythonEnvironment/</loc>
+         <lastmod>2025-07-08</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/environments/python_environment/PythonEnvironment/</loc>
+         <lastmod>2025-07-08</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/environments/system_python_environment/SystemPythonEnvironment/</loc>
+         <lastmod>2025-07-08</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/environments/venv_python_environment/VenvPythonEnvironment/</loc>
+         <lastmod>2025-07-08</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/environments/working_directory/WorkingDirectory/</loc>
+         <lastmod>2025-07-08</lastmod>
+    </url>
+    <url>
          <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/events/BaseEvent/</loc>
          <lastmod>2025-07-08</lastmod>
     </url>
@@ -1326,6 +1346,10 @@
     </url>
     <url>
          <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/tools/experimental/GoogleSearchTool/</loc>
+         <lastmod>2025-07-08</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/tools/experimental/PythonCodeExecutionTool/</loc>
          <lastmod>2025-07-08</lastmod>
     </url>
     <url>
@@ -2670,6 +2694,10 @@
     </url>
     <url>
          <loc>https://docs.ag2.ai/latest/docs/user-guide/reference-tools/browser-use/</loc>
+         <lastmod>2025-07-08</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/user-guide/reference-tools/code-execution/</loc>
          <lastmod>2025-07-08</lastmod>
     </url>
     <url>
