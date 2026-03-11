@@ -1433,6 +1433,10 @@
          <lastmod>2026-03-11</lastmod>
     </url>
     <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/tools/experimental/QuickResearchTool/</loc>
+         <lastmod>2026-03-11</lastmod>
+    </url>
+    <url>
          <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/tools/experimental/ReliableTool/</loc>
          <lastmod>2026-03-11</lastmod>
     </url>
@@ -3010,6 +3014,10 @@
     </url>
     <url>
          <loc>https://docs.ag2.ai/latest/docs/user-guide/reference-tools/perplexity-search/</loc>
+         <lastmod>2026-03-11</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/user-guide/reference-tools/quick-research/</loc>
          <lastmod>2026-03-11</lastmod>
     </url>
     <url>
