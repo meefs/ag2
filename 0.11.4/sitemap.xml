@@ -781,6 +781,10 @@
          <lastmod>2026-04-01</lastmod>
     </url>
     <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/beta/events/types/Usage/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
          <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/beta/middleware/base/BaseMiddleware/</loc>
          <lastmod>2026-04-01</lastmod>
     </url>
@@ -853,6 +857,10 @@
          <lastmod>2026-04-01</lastmod>
     </url>
     <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/beta/tools/builtin/mcp_server/MCPServerTool/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
          <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/beta/tools/builtin/memory/MemoryTool/</loc>
          <lastmod>2026-04-01</lastmod>
     </url>
@@ -874,10 +882,6 @@
     </url>
     <url>
          <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/beta/tools/builtin/shell/ShellTool/</loc>
-         <lastmod>2026-04-01</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/beta/tools/builtin/web_fetch/WebFetchCitations/</loc>
          <lastmod>2026-04-01</lastmod>
     </url>
     <url>
@@ -1953,10 +1957,6 @@
          <lastmod>2026-04-01</lastmod>
     </url>
     <url>
-         <loc>https://docs.ag2.ai/latest/docs/beta/tools/</loc>
-         <lastmod>2026-04-01</lastmod>
-    </url>
-    <url>
          <loc>https://docs.ag2.ai/latest/docs/beta/advanced/stream/</loc>
          <lastmod>2026-04-01</lastmod>
     </url>
@@ -1970,6 +1970,18 @@
     </url>
     <url>
          <loc>https://docs.ag2.ai/latest/docs/beta/context/variables/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/beta/tools/builtin_tools/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/beta/tools/toolkits/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/beta/tools/tools/</loc>
          <lastmod>2026-04-01</lastmod>
     </url>
     <url>
@@ -2445,7 +2457,7 @@
          <lastmod>2026-04-01</lastmod>
     </url>
     <url>
-         <loc>https://docs.ag2.ai/latest/docs/use-cases/notebooks/notebooks/agentchat_bedrock_addtional_model_request_field_example/</loc>
+         <loc>https://docs.ag2.ai/latest/docs/use-cases/notebooks/notebooks/agentchat_bedrock_additional_model_request_field_example/</loc>
          <lastmod>2026-04-01</lastmod>
     </url>
     <url>
