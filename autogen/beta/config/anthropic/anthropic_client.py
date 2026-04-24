@@ -28,7 +28,6 @@ from autogen.beta.events import (
     ToolCallEvent,
     ToolCallsEvent,
 )
-from autogen.beta.events.input_events import FileIdInput, ModelRequest
 from autogen.beta.response import ResponseProto
 from autogen.beta.tools.builtin.code_execution import CodeExecutionToolSchema
 from autogen.beta.tools.builtin.skills import SkillsToolSchema
@@ -38,6 +37,7 @@ from .mappers import (
     convert_messages,
     extract_mcp_servers,
     extract_skills_for_container,
+    has_file_id_references,
     normalize_usage,
     response_proto_to_output_config,
     tool_to_api,
@@ -143,8 +143,7 @@ class AnthropicClient(LLMClient):
             create_kwargs.setdefault("extra_headers", {})
             create_kwargs["extra_headers"]["anthropic-beta"] = ",".join(sorted(existing_betas))
 
-        # Files API beta: required when messages contain file_id references
-        if any(isinstance(inp, FileIdInput) for msg in messages if isinstance(msg, ModelRequest) for inp in msg.parts):
+        if has_file_id_references(messages):
             existing_betas = set((create_kwargs.get("extra_headers") or {}).get("anthropic-beta", "").split(","))
             existing_betas.discard("")
             existing_betas.add("files-api-2025-04-14")
@@ -202,7 +201,7 @@ class AnthropicClient(LLMClient):
         response: Message,
         context: "ConversationContext",
     ) -> ModelResponse:
-        text_parts: list[str] = []
+        model_msg: ModelMessage | None = None
         calls: list[ToolCallEvent] = []
 
         for block in response.content:
@@ -211,7 +210,8 @@ class AnthropicClient(LLMClient):
                     await context.send(ModelReasoning(block.thinking))
 
             elif isinstance(block, TextBlock):
-                text_parts.append(block.text)
+                model_msg = ModelMessage(block.text)
+                await context.send(model_msg)
 
             elif isinstance(block, ToolUseBlock):
                 calls.append(
@@ -221,11 +221,6 @@ class AnthropicClient(LLMClient):
                         arguments=json.dumps(block.input),
                     )
                 )
-
-        model_msg: ModelMessage | None = None
-        if text_parts:
-            model_msg = ModelMessage("\n\n".join(text_parts))
-            await context.send(model_msg)
 
         usage = normalize_usage(response.usage.model_dump() if response.usage else {})
 
