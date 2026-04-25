@@ -9,8 +9,16 @@ from typing import Any
 
 from fast_depends.library.serializer import SerializerProto
 
-from autogen.beta.events import BaseEvent, ModelRequest, ModelResponse, TextInput, ToolResultsEvent
-from autogen.beta.events.input_events import BinaryInput, BinaryType, DataInput
+from autogen.beta.events import (
+    BaseEvent,
+    BinaryInput,
+    BinaryType,
+    DataInput,
+    ModelRequest,
+    ModelResponse,
+    TextInput,
+    ToolResultsEvent,
+)
 from autogen.beta.exceptions import UnsupportedInputError, UnsupportedToolError
 from autogen.beta.response import ResponseProto
 from autogen.beta.tools.builtin.skills import SkillsToolSchema

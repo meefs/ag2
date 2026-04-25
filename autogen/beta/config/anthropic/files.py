@@ -8,7 +8,7 @@ from typing import TYPE_CHECKING
 
 from anthropic import AsyncAnthropic
 
-from autogen.beta.files.types import FileContent, FileProvider, UploadedFile
+from autogen.beta.files.types import FileContent, FileProvider, UploadedFile, _created_at_to_float
 
 if TYPE_CHECKING:
     from autogen.beta.config.anthropic.config import AnthropicConfig
@@ -40,7 +40,7 @@ class AnthropicFilesClient:
             provider=FileProvider.ANTHROPIC,
             bytes_count=result.size_bytes if hasattr(result, "size_bytes") else None,
             purpose=purpose,
-            created_at=result.created_at if hasattr(result, "created_at") else None,
+            created_at=_created_at_to_float(result.created_at if hasattr(result, "created_at") else None),
         )
 
     async def read(self, file_id: str) -> FileContent:
@@ -61,7 +61,7 @@ class AnthropicFilesClient:
                 provider=FileProvider.ANTHROPIC,
                 bytes_count=f.size_bytes if hasattr(f, "size_bytes") else None,
                 purpose=None,
-                created_at=f.created_at if hasattr(f, "created_at") else None,
+                created_at=_created_at_to_float(f.created_at if hasattr(f, "created_at") else None),
             )
             for f in result.data
         ]

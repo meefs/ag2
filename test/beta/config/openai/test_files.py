@@ -6,6 +6,7 @@ from types import SimpleNamespace
 from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
+from dirty_equals import IsFloat
 
 from autogen.beta.config.openai.files import OpenAIFilesClient
 from autogen.beta.files.types import FileContent, FileProvider, UploadedFile
@@ -33,8 +34,9 @@ class TestOpenAIFilesClient:
             provider=FileProvider.OPENAI,
             bytes_count=2048,
             purpose="assistants",
-            created_at=str(1700000000),
+            created_at=1700000000.0,
         )
+        assert result.created_at == 1700000000.0
 
     @patch("autogen.beta.config.openai.files.AsyncOpenAI")
     async def test_read(self, mock_openai_cls: MagicMock, openai_config: MagicMock) -> None:
@@ -79,7 +81,6 @@ class TestOpenAIFilesClient:
                 provider=FileProvider.OPENAI,
                 bytes_count=100,
                 purpose="assistants",
-                created_at=None,
             ),
             UploadedFile(
                 file_id="file-2",
@@ -87,9 +88,11 @@ class TestOpenAIFilesClient:
                 provider=FileProvider.OPENAI,
                 bytes_count=200,
                 purpose="fine-tune",
-                created_at=str(1700000000),
+                created_at=1700000000.0,
             ),
         ]
+        assert result[0].created_at == IsFloat()
+        assert result[1].created_at == 1700000000.0
 
     @patch("autogen.beta.config.openai.files.AsyncOpenAI")
     async def test_delete(self, mock_openai_cls: MagicMock, openai_config: MagicMock) -> None:

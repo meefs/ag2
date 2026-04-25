@@ -9,17 +9,21 @@ from typing import Any
 
 from fast_depends.library.serializer import SerializerProto
 
-from autogen.beta.events import BaseEvent, ModelRequest, ModelResponse, TextInput, ToolResultsEvent
-from autogen.beta.events.input_events import (
+from autogen.beta.events import (
+    BaseEvent,
     BinaryInput,
     BinaryType,
     DataInput,
     FileIdInput,
+    ModelRequest,
+    ModelResponse,
+    TextInput,
+    ToolResultsEvent,
     UrlInput,
+    Usage,
 )
-from autogen.beta.events.types import Usage
 from autogen.beta.exceptions import UnsupportedInputError, UnsupportedToolError
-from autogen.beta.files.types import FileProvider
+from autogen.beta.files import FileProvider
 from autogen.beta.response import ResponseProto
 from autogen.beta.tools.builtin.code_execution import CodeExecutionToolSchema
 from autogen.beta.tools.builtin.mcp_server import MCPServerToolSchema

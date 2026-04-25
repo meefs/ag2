@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING
 
 from openai import AsyncOpenAI
 
-from autogen.beta.files.types import FileContent, FileProvider, UploadedFile
+from autogen.beta.files.types import FileContent, FileProvider, UploadedFile, _created_at_to_float
 
 if TYPE_CHECKING:
     from autogen.beta.config.openai.config import OpenAIConfig, OpenAIResponsesConfig
@@ -42,7 +42,7 @@ class OpenAIFilesClient:
             provider=FileProvider.OPENAI,
             bytes_count=result.bytes,
             purpose=result.purpose,
-            created_at=str(result.created_at) if result.created_at else None,
+            created_at=_created_at_to_float(result.created_at),
         )
 
     async def read(self, file_id: str) -> FileContent:
@@ -62,7 +62,7 @@ class OpenAIFilesClient:
                 provider=FileProvider.OPENAI,
                 bytes_count=f.bytes,
                 purpose=f.purpose,
-                created_at=str(f.created_at) if f.created_at else None,
+                created_at=_created_at_to_float(f.created_at),
             )
             for f in result.data
         ]

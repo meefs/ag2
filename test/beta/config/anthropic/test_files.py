@@ -32,8 +32,9 @@ class TestAnthropicFilesClient:
             provider=FileProvider.ANTHROPIC,
             bytes_count=1024000,
             purpose=None,
-            created_at="2025-01-01T00:00:00Z",
+            created_at=1735689600.0,
         )
+        assert result.created_at == 1735689600.0
 
     @patch("autogen.beta.config.anthropic.files.AsyncAnthropic")
     async def test_read(self, mock_anthropic_cls: MagicMock, anthropic_config: MagicMock) -> None:
@@ -73,9 +74,10 @@ class TestAnthropicFilesClient:
                 provider=FileProvider.ANTHROPIC,
                 bytes_count=100,
                 purpose=None,
-                created_at="2025-01-01T00:00:00Z",
+                created_at=1735689600.0,
             ),
         ]
+        assert result[0].created_at == 1735689600.0
 
     @patch("autogen.beta.config.anthropic.files.AsyncAnthropic")
     async def test_delete(self, mock_anthropic_cls: MagicMock, anthropic_config: MagicMock) -> None:

@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 import pytest
+from dirty_equals import IsFloat
 
 from autogen.beta.events import BinaryResult
 from autogen.beta.events.input_events import FileIdInput, Input
@@ -23,7 +24,7 @@ class TestUploadedFile:
             provider=FileProvider.OPENAI,
             bytes_count=1024,
             purpose="assistants",
-            created_at="2026-01-01T00:00:00Z",
+            created_at=1767225600.0,
         )
 
         assert f == UploadedFile(
@@ -32,8 +33,9 @@ class TestUploadedFile:
             provider=FileProvider.OPENAI,
             bytes_count=1024,
             purpose="assistants",
-            created_at="2026-01-01T00:00:00Z",
+            created_at=1767225600.0,
         )
+        assert f.created_at == 1767225600.0
 
     def test_minimal_construction_defaults(self) -> None:
         assert UploadedFile(file_id="file-456") == UploadedFile(
@@ -42,7 +44,7 @@ class TestUploadedFile:
             provider=None,
             bytes_count=None,
             purpose=None,
-            created_at=None,
+            created_at=IsFloat(),
         )
 
 

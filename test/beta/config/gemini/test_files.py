@@ -31,8 +31,9 @@ class TestGeminiFilesClient:
             provider=FileProvider.GEMINI,
             bytes_count=512,
             purpose=None,
-            created_at="2025-01-01T00:00:00Z",
+            created_at=1735689600.0,
         )
+        assert result.created_at == 1735689600.0
         call_kwargs = mock_client.aio.files.upload.await_args.kwargs
         assert call_kwargs["config"] == {"display_name": "recording.mp3", "mime_type": "audio/mpeg"}
 
@@ -106,9 +107,10 @@ class TestGeminiFilesClient:
                 provider=FileProvider.GEMINI,
                 bytes_count=100,
                 purpose=None,
-                created_at="2025-01-01",
+                created_at=1735689600.0,
             ),
         ]
+        assert result[0].created_at == 1735689600.0
 
     @patch("autogen.beta.config.gemini.files.genai")
     async def test_delete(self, mock_genai: MagicMock, gemini_config: MagicMock) -> None:
