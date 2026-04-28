@@ -6,7 +6,7 @@
 
 Aggregation extracts structured knowledge from raw events and writes it
 to the knowledge store. This is the knowledge-organizing operation:
-triggered at deterministic milestones to maintain actor effectiveness.
+triggered at deterministic milestones to maintain agent effectiveness.
 
 Unlike compaction (which removes), aggregation creates.
 """
@@ -14,6 +14,8 @@ Unlike compaction (which removes), aggregation creates.
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import Protocol, runtime_checkable
+
+from fast_depends.pydantic import PydanticSerializer
 
 from autogen.beta.annotations import Context
 from autogen.beta.config import ModelConfig
@@ -69,6 +71,10 @@ class ConversationSummaryAggregate:
 
     def __init__(self, config: ModelConfig) -> None:
         self._config = config
+        self._serializer = PydanticSerializer(
+            pydantic_config={"arbitrary_types_allowed": True},
+            use_fastdepends_errors=False,
+        )
         self.last_usage: dict = {}
 
     async def aggregate(
@@ -95,6 +101,7 @@ class ConversationSummaryAggregate:
             ConversationContext(MemoryStream()),
             tools=[],
             response_schema=None,
+            serializer=self._serializer,
         )
         self.last_usage = response.usage if hasattr(response, "usage") and response.usage else {}
         return response.content or ""
@@ -104,7 +111,7 @@ class WorkingMemoryAggregate:
     """Update /memory/working.md with latest context.
 
     Reads existing working memory, merges with new events, writes
-    updated working memory. The actor starts each new conversation
+    updated working memory. The agent starts each new conversation
     with this as context (via WorkingMemoryPolicy).
 
     Costs one LLM call per aggregation.
@@ -112,6 +119,10 @@ class WorkingMemoryAggregate:
 
     def __init__(self, config: ModelConfig) -> None:
         self._config = config
+        self._serializer = PydanticSerializer(
+            pydantic_config={"arbitrary_types_allowed": True},
+            use_fastdepends_errors=False,
+        )
         self.last_usage: dict = {}
 
     async def aggregate(
@@ -129,7 +140,7 @@ class WorkingMemoryAggregate:
     async def _merge(self, existing: str, events: list[BaseEvent]) -> str:
         client = self._config.create()
         prompt = (
-            "You maintain an actor's working memory. Update it based on "
+            "You maintain an agent's working memory. Update it based on "
             "the new conversation below. Preserve important existing context. "
             "Remove outdated information. Keep it concise and actionable.\n\n"
             f"## Current Working Memory\n{existing or '(empty)'}\n\n"
@@ -140,6 +151,7 @@ class WorkingMemoryAggregate:
             ConversationContext(MemoryStream()),
             tools=[],
             response_schema=None,
+            serializer=self._serializer,
         )
         self.last_usage = response.usage if hasattr(response, "usage") and response.usage else {}
         return response.content or existing

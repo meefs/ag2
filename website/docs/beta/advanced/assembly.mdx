@@ -42,14 +42,13 @@ class AssemblyPolicy(Protocol):
 
 A policy receives the current `prompts` and `events`, returns modified copies. Policies compose left-to-right: each one sees the output of the previous. They must be pure — side-effect-free, idempotent where possible, and they must not emit events onto the stream (with one exception: `AlertPolicy` emits `HaltEvent` on FATAL, documented below).
 
-## AssemblerMiddleware
+## Wiring policies onto an Agent
 
-Wire the chain onto an Agent by constructing an `AssemblerMiddleware` with your policy list:
+Pass your policy list via the `assembly=` keyword when constructing an Agent. The Agent wires an internal `AssemblerMiddleware` at the outermost position of the middleware chain automatically.
 
-```python linenums="1" hl_lines="11-15"
+```python linenums="1" hl_lines="10-14"
 from autogen.beta import (
     Agent,
-    AssemblerMiddleware,
     AlertPolicy,
     WorkingMemoryPolicy,
     SlidingWindowPolicy,
@@ -59,26 +58,23 @@ from autogen.beta.config import OpenAIConfig
 agent = Agent(
     "assistant",
     config=OpenAIConfig(model="gpt-5"),
-    middleware=[
-        lambda event, ctx: AssemblerMiddleware(
-            event,
-            ctx,
-            policies=[
-                WorkingMemoryPolicy(),
-                AlertPolicy(),
-                SlidingWindowPolicy(max_events=50),
-            ],
-        ),
+    assembly=[
+        WorkingMemoryPolicy(),
+        AlertPolicy(),
+        SlidingWindowPolicy(max_events=50),
     ],
 )
 ```
 
-`AssemblerMiddleware` sits at the outermost position in the middleware chain, before any user-provided middleware or the LLM client itself. Inside each turn it:
+Inside each turn the `AssemblerMiddleware`:
 
 1. Builds the `prompts` / `events` pair from the current context.
 2. Runs every policy in order, piping the output of each into the next.
 3. Temporarily swaps `context.prompt` for the assembled version while the LLM call runs.
 4. Restores the original prompt afterward.
+
+!!! tip
+    `AssemblerMiddleware` and `AssemblyPolicy` are also available as public symbols from `#!python autogen.beta` if you need to wire the middleware manually (for example, inside a custom harness that isn't built on `Agent`).
 
 ## Ordering matters
 
@@ -160,7 +156,7 @@ Takes no arguments. Dedup state lives on the instance — give each Agent its ow
 
 ### WorkingMemoryPolicy
 
-Reads `/memory/working.md` from the [KnowledgeStore](/docs/beta/advanced/knowledge_store) and injects it into the prompt. Working memory is the actor's persistent state — written between conversations by an aggregation strategy and read on every turn.
+Reads `/memory/working.md` from the [KnowledgeStore](/docs/beta/advanced/knowledge_store) and injects it into the prompt. Working memory is the agent's persistent state — written between conversations by an aggregation strategy and read on every turn.
 
 ```python linenums="1" hl_lines="7-12"
 from autogen.beta import AssemblerMiddleware, WorkingMemoryPolicy
