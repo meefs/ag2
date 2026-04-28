@@ -23,6 +23,7 @@ from .base import (
     NoopChangeSubscription,
 )
 from .bootstrap import DefaultBootstrap, StoreBootstrap
+from .constants import CONVERSATIONS_PREFIX, LOG_PREFIX, WORKING_MEMORY_PATH
 from .locked import LockedKnowledgeStore
 from .log import EventLogWriter
 from .memory import MemoryKnowledgeStore
@@ -35,6 +36,9 @@ except ImportError as e:
     DiskKnowledgeStore = missing_optional_dependency("DiskKnowledgeStore", "watchdog", e)  # type: ignore[misc]
 
 __all__ = [
+    "CONVERSATIONS_PREFIX",
+    "LOG_PREFIX",
+    "WORKING_MEMORY_PATH",
     "ChangeCallback",
     "ChangeSubscription",
     "DefaultBootstrap",
