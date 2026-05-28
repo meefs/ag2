@@ -2889,6 +2889,22 @@
          <lastmod>2026-05-28</lastmod>
     </url>
     <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/llm_clients/anthropic_v2/AnthropicV2Client/</loc>
+         <lastmod>2026-05-28</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/llm_clients/anthropic_v2/AnthropicV2LLMConfigEntry/</loc>
+         <lastmod>2026-05-28</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/llm_clients/bedrock_v2/BedrockV2Client/</loc>
+         <lastmod>2026-05-28</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/llm_clients/bedrock_v2/BedrockV2LLMConfigEntry/</loc>
+         <lastmod>2026-05-28</lastmod>
+    </url>
+    <url>
          <loc>https://docs.ag2.ai/latest/docs/api-reference/autogen/llm_clients/client_v2/ModelClientV2/</loc>
          <lastmod>2026-05-28</lastmod>
     </url>
@@ -4245,6 +4261,10 @@
          <lastmod>2026-05-28</lastmod>
     </url>
     <url>
+         <loc>https://docs.ag2.ai/latest/docs/ecosystem/hindsight/</loc>
+         <lastmod>2026-05-28</lastmod>
+    </url>
+    <url>
          <loc>https://docs.ag2.ai/latest/docs/ecosystem/llamaindex/</loc>
          <lastmod>2026-05-28</lastmod>
     </url>
@@ -4862,6 +4882,14 @@
     </url>
     <url>
          <loc>https://docs.ag2.ai/latest/docs/use-cases/notebooks/notebooks/agentchat_v1_v2_client_compatibility/</loc>
+         <lastmod>2026-05-28</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/use-cases/notebooks/notebooks/agentchat_v2_anthropic_client_example/</loc>
+         <lastmod>2026-05-28</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.ag2.ai/latest/docs/use-cases/notebooks/notebooks/agentchat_v2_bedrock_client_example/</loc>
          <lastmod>2026-05-28</lastmod>
     </url>
     <url>
