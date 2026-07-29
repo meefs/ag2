@@ -120,7 +120,6 @@ mcp = [
 # MCP-UI resources (ag2.mcp_ui) — return renderable UI blobs from tool results
 mcp-ui = [
     "mcp-ui-server>=1.0.0",
-    "mcp>=1.11.0,<2",
 ]
 
 [dependency-groups]
@@ -220,7 +219,7 @@ docs = [
     "pyyaml==6.0.3",
     "termcolor==3.3.0",
     "nbclient==0.11.0",
-    "mcp>=1.11.0,<2",
+    "mcp>=1.11.0",
 ]
 
 types = [
