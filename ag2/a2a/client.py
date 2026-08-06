@@ -8,7 +8,7 @@ from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Any, TypeAlias
 
 import httpx
-from a2a.client import A2ACardResolver, Client, ClientCallInterceptor
+from a2a.client import A2ACardResolver, Client, ClientCallContext, ClientCallInterceptor
 from a2a.client.errors import A2AClientError
 from a2a.types import (
     AgentCard,
@@ -67,6 +67,8 @@ from .extension import (
     EXTRA_PARTS_DEPENDENCY_KEY,
     MIME_TOOL_CALL,
     TENANT_VARIABLE_KEY,
+    extension_call_context,
+    validate_extension_activation,
 )
 from .mappers import (
     build_input_response_message,
@@ -167,7 +169,7 @@ class A2AClient(LLMClient):
     stateless on AG2 history (see ``mappers/history.py``).
     """
 
-    def __init__(
+    def __init__(  # type: ignore[no-any-unimported]
         self,
         *,
         card_url: str,
@@ -186,6 +188,7 @@ class A2AClient(LLMClient):
         card_signature_verifier: CardVerifier | None = None,
         tenant: str | None = None,
         history_length: int | None = None,
+        extensions: Sequence[str] = (),
     ) -> None:
         self._card_url = card_url
         self._prefer = prefer
@@ -203,11 +206,15 @@ class A2AClient(LLMClient):
         self._card_signature_verifier = card_signature_verifier
         self._tenant = tenant
         self._history_length = history_length
+        # Dedup, preserving the user's order — the URIs travel as a list on
+        # ``Message.extensions``.
+        self._extensions = tuple(dict.fromkeys(extensions))
 
         self._httpx_client: httpx.AsyncClient | None = None
         self._sdk_client: Client | None = None
         self._agent_card: AgentCard | None = preset_card
         self._task_id: str | None = None
+        self._call_context: ClientCallContext | None = None
 
     async def __call__(
         self,
@@ -260,6 +267,7 @@ class A2AClient(LLMClient):
                     user_text,
                     task_id=self._task_id or "",
                     context_id=self._read_context_id(context),
+                    extra_extensions=self._extensions,
                 )
 
             if state.terminal_task is not None and (exc_cls := _FAILURE_ERRORS.get(state.finish_reason)):
@@ -284,6 +292,7 @@ class A2AClient(LLMClient):
             await self._httpx_client.aclose()
             self._httpx_client = None
         self._sdk_client = None
+        self._call_context = None
 
     def _verify_card(self, card: AgentCard, *, source: str) -> None:
         """Opt-in JWS check: no-op without a verifier; wraps SDK errors in ag2's."""
@@ -313,8 +322,11 @@ class A2AClient(LLMClient):
             self._verify_card(self._agent_card, source="fetched agent card")
         else:
             self._verify_card(self._preset_card, source="preset agent card")
+        assert self._agent_card is not None
         iface, transport = select_interface(self._agent_card, url=self._card_url, prefer=self._prefer)
         validate_protocol_version(iface, url=self._card_url, transport=transport)
+        validate_extension_activation(self._agent_card, self._extensions, url=self._card_url)
+        self._call_context = extension_call_context(self._extensions)
         self._sdk_client = make_a2a_client(
             card=self._agent_card,
             httpx_client=self._httpx_client,
@@ -327,6 +339,7 @@ class A2AClient(LLMClient):
             kwargs = self._maybe_tenant(context)
             extended = await self._sdk_client.get_extended_agent_card(
                 GetExtendedAgentCardRequest(**kwargs),
+                context=self._call_context,
             )
             self._verify_card(extended, source="extended agent card")
             self._agent_card = extended
@@ -372,6 +385,7 @@ class A2AClient(LLMClient):
                 task_id=self._task_id,
                 context_id=context_id,
                 context_update=dict(context.variables) or None,
+                extra_extensions=self._extensions,
             )
 
         inputs: list[Input] = next(
@@ -388,6 +402,7 @@ class A2AClient(LLMClient):
             advertise_extension=bool(function_schemas) or self._task_id is not None,
             context_update=dict(context.variables) or None,
             extra_parts=extra_parts,
+            extra_extensions=self._extensions,
         )
 
     async def _drive_task(
@@ -410,7 +425,7 @@ class A2AClient(LLMClient):
         assert self._sdk_client is not None
 
         request = self._build_send_request(message, context)
-        stream = self._sdk_client.send_message(request)
+        stream = self._sdk_client.send_message(request, context=self._call_context)
 
         attempt = 0
         while True:
@@ -423,7 +438,7 @@ class A2AClient(LLMClient):
                 backoff = self._reconnect_backoff * (2 ** (attempt - 1))
                 await asyncio.sleep(backoff)
                 resubscribe = SubscribeToTaskRequest(**self._maybe_tenant(context, id=self._task_id))
-                stream = self._sdk_client.subscribe(resubscribe)
+                stream = self._sdk_client.subscribe(resubscribe, context=self._call_context)
 
     async def _consume_polling(
         self,
@@ -434,7 +449,11 @@ class A2AClient(LLMClient):
         assert self._sdk_client is not None
 
         request = self._build_send_request(message, context)
-        outcome = await self._drain_stream(self._sdk_client.send_message(request), context, state)
+        outcome = await self._drain_stream(
+            self._sdk_client.send_message(request, context=self._call_context),
+            context,
+            state,
+        )
         if state.finish_reason in ("failed", "rejected", "auth_required") or outcome.input_required:
             return outcome
 
@@ -445,7 +464,10 @@ class A2AClient(LLMClient):
             get_kwargs = self._maybe_tenant(context, id=self._task_id)
             if self._history_length is not None:
                 get_kwargs["history_length"] = self._history_length
-            task = await self._sdk_client.get_task(GetTaskRequest(**get_kwargs))
+            task = await self._sdk_client.get_task(
+                GetTaskRequest(**get_kwargs),
+                context=self._call_context,
+            )
             await self._absorb_task_artifacts(task, context, state)
             if task.status.state in _TERMINAL_STATES:
                 if reason := _FAILURE_REASONS.get(task.status.state):

@@ -24,8 +24,13 @@ from ._common import (
     wrap_extended_card_modifier,
 )
 
+# ``grpc`` and the generated ``a2a_pb2_grpc`` ship no type information, so
+# every ``grpc.aio.*`` annotation below degrades to ``Any`` and the generated
+# servicer registration reads as untyped. The ignores are the unfollowed
+# import, not a defect here — drop them once stubs are available.
 
-def default_grpc_channel_factory(url: str) -> grpc.aio.Channel:
+
+def default_grpc_channel_factory(url: str) -> grpc.aio.Channel:  # type: ignore[no-any-unimported]
     """Insecure ``grpc.aio.Channel`` factory; strips ``grpc(+insecure)://`` prefix."""
     for prefix in ("grpc+insecure://", "grpc://"):
         if url.startswith(prefix):
@@ -34,7 +39,7 @@ def default_grpc_channel_factory(url: str) -> grpc.aio.Channel:
     return grpc.aio.insecure_channel(url)
 
 
-def build_grpc_server(
+def build_grpc_server(  # type: ignore[no-any-unimported]
     *,
     agent_executor: AgentExecutor,
     agent_card: AgentCard,
@@ -67,6 +72,6 @@ def build_grpc_server(
         push_sender=push_sender,
     )
     server = grpc.aio.server(options=list(options) if options else None)
-    a2a_pb2_grpc.add_A2AServiceServicer_to_server(GrpcHandler(handler), server)
+    a2a_pb2_grpc.add_A2AServiceServicer_to_server(GrpcHandler(handler), server)  # type: ignore[no-untyped-call]
     server.add_insecure_port(bind)
     return server
