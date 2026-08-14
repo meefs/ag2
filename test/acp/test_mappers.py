@@ -81,7 +81,7 @@ def test_plan() -> None:
 
 
 def test_incremental_plan_items_update_maps_to_plan() -> None:
-    """acp 0.11 `plan_update` carrying items is the same information as `plan`."""
+    """A `plan_update` carrying items is the same information as `plan`."""
     plan = map_session_update(
         schema.AgentPlanContentUpdate(
             session_update="plan_update",
