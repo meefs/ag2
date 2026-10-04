@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-from collections.abc import Sequence
+from collections.abc import Awaitable, Callable, Sequence
 from typing import TYPE_CHECKING, Any
 
 from a2a.server.agent_execution import AgentExecutor as A2AAgentExecutorBase
@@ -70,6 +70,7 @@ class A2AServer:
         "_extended_card_modifier",
         "_push_config_store",
         "_push_sender",
+        "_push_url_validator",
         "_task_store",
     )
 
@@ -84,8 +85,14 @@ class A2AServer:
         task_store: TaskStore | None = None,
         push_config_store: PushNotificationConfigStore | None = None,
         push_sender: PushNotificationSender | None = None,
+        push_url_validator: Callable[[str], Awaitable[bool]] | None = None,
         executor: A2AAgentExecutorBase | None = None,
     ) -> None:
+        if push_url_validator is not None and push_config_store is None:
+            raise ValueError(
+                "push_url_validator has no effect without push_config_store: "
+                "push notifications are disabled until a store is provided."
+            )
         self._agent = agent
         self._extended_card = extended_card
         self._card_modifier = card_modifier
@@ -97,6 +104,7 @@ class A2AServer:
         self._task_store = task_store or InMemoryTaskStore()
         self._push_config_store = push_config_store
         self._push_sender = push_sender
+        self._push_url_validator = push_url_validator
         # ``executor`` is escape-hatch for tests / advanced use cases that
         # need a custom ``AgentExecutor``. Default wraps the supplied agent.
         self._executor = executor if executor is not None else AgentExecutor(agent)
@@ -127,6 +135,7 @@ class A2AServer:
             "task_store": self._task_store,
             "push_config_store": self._push_config_store,
             "push_sender": self._push_sender,
+            "push_url_validator": self._push_url_validator,
         }
         if include_card_modifier:
             kwargs["card_modifier"] = self._card_modifier
